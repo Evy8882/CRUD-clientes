@@ -1,0 +1,100 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{
+    margin: 0px;
+    width: 100%;
+}
+header{
+    height: 40px;
+    font-size: 18pt;
+    background-color: rgb(236, 236, 236);
+    width: 96%;
+    border-bottom: solid 1px rgb(139, 139, 139);
+    padding: 30px;
+}
+
+header div{
+    display: grid;
+    float: left;
+}
+header a{
+    display: grid;
+    float: right;
+    color: black;
+    text-decoration: none;
+}
+header a:hover{
+    display: grid;
+    float: right;
+    color: rgb(0, 170, 147);
+}
+.pageContainer{
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    width: 96%;
+    margin: auto;
+    height: 200px;
+}
+.cadContainer{
+    text-align: left;
+    width: 480px;
+    margin: auto;
+    padding: 20px;
+    border: solid 1px rgb(192, 192, 192);
+    border-radius: 10px;
+}
+.cadContainer input,
+.cadContainer button{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 6px;
+}
+.cadContainer button{
+    background-color: rgb(3, 238, 207);
+    cursor: pointer;
+    margin-top: 15px;
+}
+.cadContainer button:hover,
+.cadContainer button:focus{
+    background-color: rgb(0, 194, 168);
+}
+.error{
+    color: rgb(202, 0, 0);
+}
+.sucesso{
+    color: rgb(0, 138, 0);
+}
+table{
+    border: solid 1px rgb(192, 192, 192);
+    margin: auto;
+    padding: 3px;
+    border-radius: 4px;
+}
+th{
+    background-color: rgb(202, 202, 202);
+    border: solid 1px rgb(0, 0, 0);
+    width: 200px;
+    height: 30px;
+}
+td{
+    border: solid 1px rgb(0, 0, 0);
+    height: 30px;
+}
+td:hover{
+    background-color: rgba(190, 196, 195, 0.429);
+}
+tr:hover{
+    background-color: rgba(233, 233, 233, 0.629);
+}
+.pageContainer a{
+    color: rgb(0, 170, 147);
+    text-decoration: none;
+}
+.pageContainer a:hover{
+    color: rgb(0, 90, 78);
+    text-decoration: underline;
+}
