@@ -21,6 +21,8 @@
 • MySQL
 
 ## Instalando
-Use o seguinte comando para clonar o projeto: <br>
+Use o seguinte comando para clonar o projeto:
+
 ![image](https://user-images.githubusercontent.com/124212111/230787120-3ae9d733-ed73-4d79-9706-17b5b1999b5b.png)
 
+Para rodar é necessario um servidor Apache e um servidor de banco de dados MySQL onde é necessario importar o arquivo SQL
