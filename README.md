@@ -1,28 +1,32 @@
 # CRUD-clientes
-### CRUD simples feito com PHP e MySQL
+### Plataforma de cadastro de clientes feito com PHP e utiizando um banco de dados MySQL
 
-![image](https://user-images.githubusercontent.com/124212111/230786836-b1ee3166-53e7-401e-83da-54dd385f76c5.png)
 
 ## Sobre o projeto:
 
-• Projeto (ainda em desenvolvimento) de um CRUD (Create, Read, Update e Delete) sobre cadastro de clientes criado para fins didático utilizando PHP e MySQL
+• Projeto (ainda em desenvolvimento) de um CRUD (Create, Read, Update e Delete) sobre cadastro de clientes criado para fins didáticos utilizando PHP e MySQL
 
 • As informações são salvas em um banco de dados SQL
+
+• Informações salvas dos clientes: Nome(obrigatório), Email, Telefone, CPF, Data de nascimento, Data e hora em que foi realizado o projeto
+
+• Cadastro e login de usuários usando seções
 
 • Sinta-se livre para clonar o projeto e usa-lo para estudos ou outros fins
 
 ## Tecnologias usadas:
-• HTML 5
 
-• CSS 3
+• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" /> HTML 5
 
-• PHP
+• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" /> CSS 3
 
-• MySQL
+• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" /> PHP
 
-## Instalando
+• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg" /> MySQL
+
+## Instalando:
 Use o seguinte comando para clonar o projeto:
 
-![image](https://user-images.githubusercontent.com/124212111/230787120-3ae9d733-ed73-4d79-9706-17b5b1999b5b.png)
+git clone https://github.com/Evy8882/CRUD-clientes
 
 Para rodar é necessario um servidor Apache e um servidor de banco de dados MySQL onde é necessario importar o arquivo SQL
