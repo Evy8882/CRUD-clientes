@@ -1,6 +1,8 @@
 <?php
 include("connect.php");
-$clientes = $conn->query("SELECT * FROM `clientes`") or die($conn->error);
+include("protect.php");
+$user = $_SESSION['id'];
+$clientes = $conn->query("SELECT * FROM `clientes` WHERE `user`=$user") or die($conn->error);
 $num_clientes = $clientes->num_rows;
 ?>
 
@@ -11,18 +13,14 @@ $num_clientes = $clientes->num_rows;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de clientes</title>
+    <title>Cadastro de clientes - Lista de clientes</title>
     <link rel="stylesheet" href="css/crud_style.css">
 </head>
 
 <body>
     <!-- Página de clientes -->
-    <header>
-        <div>Cadastro</div>
-        <a href="cadastro.php">CADASTRAR </a>
-        <a href="clientes.php">CLIENTES / </a>
-        <a href="index.php">HOME / </a>
-    </header>
+    <?php include('header.html') ?>
+    
     <section class="pageContainer">
         <h1>Seus clientes</h1>
         <a href="cadastro.php">+ cadastrar um novo cliente</a><br><br>
@@ -33,6 +31,7 @@ $num_clientes = $clientes->num_rows;
                     <th>Nome</th>
                     <th>Email</th>
                     <th>Telefone</th>
+                    <th>CPF</th>
                     <th>Nascimento</th>
                     <th>Cadastro</th>
                     <th>Ações</th>
@@ -41,7 +40,7 @@ $num_clientes = $clientes->num_rows;
                     <?php
                     if ($num_clientes == 0) { ?>
                         <tr>
-                            <td colspan="7"><br><b>Não há clientes cadastrados</b></td>
+                            <td colspan="8"><br><b>Não há clientes cadastrados</b></td>
                         </tr>
                         <?php
                     } else {
@@ -54,6 +53,14 @@ $num_clientes = $clientes->num_rows;
                                 $part2 = substr($telefone, 7);
                                 $telefone = "($ddd) $part1-$part2";
                             }
+                            $cpf = $cliente['cpf'];
+                            if (strlen($cliente['cpf']) == 11){
+                                $par1 = substr($cpf, 0, 3);
+                                $par2 = substr($cpf, 3, 3);
+                                $par3 = substr($cpf, 6,3);
+                                $par4 = substr($cpf, 9);
+                                $cpf = "$par1.$par2.$par3-$par4";
+                            }
                             $nascimento = implode('/', array_reverse(explode('-',$cliente['nascimento'])));
                         ?>
                             <tr>
@@ -61,6 +68,7 @@ $num_clientes = $clientes->num_rows;
                                 <td><?php echo $cliente['nome']?></td>
                                 <td><?php echo $cliente['email']?></td>
                                 <td><?php echo $telefone?></td>
+                                <td><?php echo $cpf?></td>
                                 <td><?php echo $nascimento?></td>
                                 <td><?php echo $cliente['cadastro']?></td>
                                 <td>

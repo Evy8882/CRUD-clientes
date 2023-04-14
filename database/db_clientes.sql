@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2023 at 07:02 PM
+-- Generation Time: Apr 14, 2023 at 09:26 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -30,10 +30,25 @@ SET time_zone = "+00:00";
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `telefone` varchar(11) NOT NULL,
-  `nascimento` date NOT NULL,
-  `cadastro` datetime NOT NULL DEFAULT current_timestamp()
+  `email` varchar(100) DEFAULT NULL,
+  `telefone` varchar(11) DEFAULT NULL,
+  `cpf` varchar(11) DEFAULT NULL,
+  `nascimento` date DEFAULT NULL,
+  `cadastro` datetime NOT NULL DEFAULT current_timestamp(),
+  `user` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(90) NOT NULL,
+  `pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -47,6 +62,12 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -54,7 +75,13 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
