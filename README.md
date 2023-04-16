@@ -4,13 +4,15 @@
 
 ## Sobre o projeto:
 
-• Projeto (ainda em desenvolvimento) de um CRUD (Create, Read, Update e Delete) sobre cadastro de clientes criado para fins didáticos utilizando PHP e MySQL
+• Plataforma de cadastro de clientes sobre cadastro de clientes criado para fins didáticos utilizando PHP e MySQL
 
 • As informações são salvas em um banco de dados SQL
 
 • Informações salvas dos clientes: Nome(obrigatório), Email, Telefone, CPF, Data de nascimento, Data e hora em que foi realizado o projeto
 
 • Cadastro e login de usuários usando seções
+
+• Ao fazer o cadastro de usuário é feito uma confirmação do Email do usuário usando a biblioteca "PHPMailer"
 
 • Sinta-se livre para clonar o projeto e usa-lo para estudos ou outros fins
 
