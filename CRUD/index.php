@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes - Página inicial</title>
-    <link rel="stylesheet" href="css/home_style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Página inicial -->
-    <?php include('header.html') ?>
-    <section>
+    <?php include('header.php') ?>
+    <section class="home-section">
         <h1>Bem vindo</h1>
         <div>Cadastre seu clientes por aqui</div><br>
         <a href="clientes.php"><button>Entrar</button></a>

@@ -54,8 +54,8 @@ if (isset($_SESSION['crip_code'])){
 
 
 if (!isset($_SESSION['crip_code'])){
-    include('register.html');
+    include('registerCont.php');
 }else{
-    include('confirm.html');
+    include('confirmCont.php');
 }
 

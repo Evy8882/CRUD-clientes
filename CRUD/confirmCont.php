@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes - Registre-se</title>
-    <link rel="stylesheet" href="css/crud_style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Página de confirmação de E-mail -->
-    <?php include('header.html') ?>
+    <?php include('header.php') ?>
     <section class="pageContainer">
         <h1>Confirme seu E-mail para continuar</h1>
         <section class="cadContainer">

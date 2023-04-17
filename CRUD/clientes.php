@@ -14,17 +14,17 @@ $num_clientes = $clientes->num_rows;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes - Lista de clientes</title>
-    <link rel="stylesheet" href="css/crud_style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Página de clientes -->
-    <?php include('header.html') ?>
+    <?php include('header.php') ?>
     
     <section class="pageContainer">
         <h1>Seus clientes</h1>
         <a href="cadastro.php">+ cadastrar um novo cliente</a><br><br>
-        <section>
+        <section class="table-container">
             <table>
                 <thead>
                     <th>ID</th>
@@ -40,7 +40,7 @@ $num_clientes = $clientes->num_rows;
                     <?php
                     if ($num_clientes == 0) { ?>
                         <tr>
-                            <td colspan="8"><br><b>Não há clientes cadastrados</b></td>
+                            <td colspan="8"><br><b>Você ainda não cadastrou nenhum cliente</b></td>
                         </tr>
                         <?php
                     } else {

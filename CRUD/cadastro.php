@@ -27,12 +27,12 @@ if (count($_POST) > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes - Cadastrar novo cliente</title>
-    <link rel="stylesheet" href="css/crud_style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Página de cadastro -->
-    <?php include('header.html') ?>
+    <?php include('header.php') ?>
     
     <section class="pageContainer">
         <h1>Cadastro</h1>

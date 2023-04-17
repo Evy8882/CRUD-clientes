@@ -28,11 +28,11 @@ if ($_POST ?? ''){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes - Faça login para continuar</title>
-    <link rel="stylesheet" href="css/crud_style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Página de login -->
-    <?php include('header.html') ?>
+    <?php include('header.php') ?>
     <section class="pageContainer">
         <h1>Faça login para continuar</h1>
         <section class="cadContainer">
