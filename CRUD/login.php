@@ -43,7 +43,7 @@ if ($_POST ?? ''){
             <h3>login</h3>
             <form action="" method="post">
                 <label for="email">Email:</label>
-                <input type="text" placeholder="email@example.com" name="email">
+                <input type="email" placeholder="email@example.com" name="email" required>
                 <label for="pass">Senha:</label>
                 <input type="password" placeholder="Password..." name="pass" required>
                 <a href="register.php">Não possui uma conta? Registre-se clicando aqui</a>
