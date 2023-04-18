@@ -62,6 +62,7 @@ if (!isset($_SESSION)) {
                         display: flex;
                         flex-direction: column;
                         margin-bottom: 10px;
+                        margin-left: 20px;
                         text-align: center;
                 }
 

@@ -2,18 +2,22 @@
 include("connect.php");
 if ($_POST ?? ''){
     if (isset($_POST['email']) && isset($_POST['pass'])){
-        $email = $_POST['email'];
-        $pass = $_POST['pass'];
-        $exe = $conn->query("SELECT * FROM `users` WHERE `email` = '$email' LIMIT 1;") or die($conn->error);
+        if (filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+            $email = str_replace("'", "", $_POST['email']);
+            $pass = $_POST['pass'];
+            $exe = $conn->query("SELECT * FROM `users` WHERE `email` = '$email' LIMIT 1;") or die($conn->error);
 
-        $user = $exe->fetch_assoc();
-        if (password_verify($pass ?? '', $user['pass'] ?? '')){
-            if (!isset($_SESSION))
-                session_start();
-                $_SESSION['id'] = $user['id'];
-                header("location: index.php");
+            $user = $exe->fetch_assoc();
+            if (password_verify($pass ?? '', $user['pass'] ?? '')){
+                if (!isset($_SESSION))
+                    session_start();
+                    $_SESSION['id'] = $user['id'];
+                    header("location: index.php");
+            }else{
+                $login_error = "Email ou senha inválidos";
+            }
         }else{
-            $login_error = "Email ou senha inválidos";
+            $login_error = "Email invalido";
         }
     }
 }
@@ -39,7 +43,7 @@ if ($_POST ?? ''){
             <h3>login</h3>
             <form action="" method="post">
                 <label for="email">Email:</label>
-                <input type="email" placeholder="email@example.com" name="email" required>
+                <input type="text" placeholder="email@example.com" name="email">
                 <label for="pass">Senha:</label>
                 <input type="password" placeholder="Password..." name="pass" required>
                 <a href="register.php">Não possui uma conta? Registre-se clicando aqui</a>
