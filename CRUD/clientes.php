@@ -2,7 +2,7 @@
 include("connect.php");
 include("protect.php");
 $user = $_SESSION['id'];
-$nome = $_POST["search"] ?? '';
+$nome = $conn->escape_string($_POST["search"] ?? '');
 $clientes = $conn->query("SELECT * FROM `clientes` WHERE `user`=$user AND `nome` LIKE '%$nome%'") or die($conn->error);
 $num_clientes = $clientes->num_rows;
 ?>
@@ -15,6 +15,7 @@ $num_clientes = $clientes->num_rows;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes - Lista de clientes</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
 

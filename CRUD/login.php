@@ -3,7 +3,7 @@ include("connect.php");
 if ($_POST ?? ''){
     if (isset($_POST['email']) && isset($_POST['pass'])){
         if (filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
-            $email = str_replace("'", "", $_POST['email']);
+            $email = $conn->escape_string($_POST['email']);
             $pass = $_POST['pass'];
             $exe = $conn->query("SELECT * FROM `users` WHERE `email` = '$email' LIMIT 1;") or die($conn->error);
 
@@ -32,6 +32,7 @@ if ($_POST ?? ''){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes - Faça login para continuar</title>
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
