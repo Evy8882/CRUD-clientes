@@ -2,7 +2,8 @@
 include("connect.php");
 include("protect.php");
 $user = $_SESSION['id'];
-$clientes = $conn->query("SELECT * FROM `clientes` WHERE `user`=$user") or die($conn->error);
+$nome = $_POST["search"] ?? '';
+$clientes = $conn->query("SELECT * FROM `clientes` WHERE `user`=$user AND `nome` LIKE '%$nome%'") or die($conn->error);
 $num_clientes = $clientes->num_rows;
 ?>
 
@@ -24,6 +25,13 @@ $num_clientes = $clientes->num_rows;
     <section class="pageContainer">
         <h1>Seus clientes</h1>
         <a href="cadastro.php">+ cadastrar um novo cliente</a><br><br>
+
+            <form action="" method="POST">
+            <input type="text" name="search" style="width: 300px" placeholder="Procure o cliente digitando o nome dele aqui..." value="<?php echo $nome ?>">
+            <button type="submit">Buscar</button>
+            </form>
+        
+        
         <section class="table-container">
             <table>
                 <thead>

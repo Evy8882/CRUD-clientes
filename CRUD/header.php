@@ -44,8 +44,6 @@ if (!isset($_SESSION)) {
 
         .navegacao {
                 margin-right: 20px;
-                display: flex;
-                flex-direction: row;
         }
 
         .cadastro {

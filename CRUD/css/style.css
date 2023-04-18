@@ -4,6 +4,7 @@
 body{
     margin: 0px;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .home-section{
