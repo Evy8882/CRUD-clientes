@@ -27,7 +27,7 @@ $num_clientes = $clientes->num_rows;
         <a href="cadastro.php">+ cadastrar um novo cliente</a><br><br>
 
             <form action="" method="POST">
-            <input type="text" name="search" style="width: 300px" placeholder="Procure o cliente digitando o nome dele aqui..." value="<?php echo $nome ?>">
+            <input type="text" name="search" style="width: 300px; max-width: 90%;" placeholder="Procure o cliente digitando o nome dele aqui..." value="<?php echo $nome ?>">
             <button type="submit">Buscar</button>
             </form>
         
