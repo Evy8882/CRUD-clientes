@@ -18,13 +18,13 @@
 
 ## Tecnologias usadas:
 
-• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" /> HTML 5
+• <img height="32px" align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" /> HTML 5
 
-• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" /> CSS 3
+• <img height="32px" align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" /> CSS 3
 
-• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" /> PHP
+• <img height="32px" align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" /> PHP
 
-• <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg" /> MySQL
+• <img height="32px" align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg" /> MySQL
 
 ## Instalando:
 Use o seguinte comando para clonar o projeto:
